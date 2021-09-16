@@ -1,0 +1,19 @@
+apiVersion : apps/v1
+kind: Deployment
+metadata:
+  name: "karthikaks-3ad5"
+spec:
+  replicas: 2
+  selector:
+    matchLabels:
+      app: "karthikaks-3ad5"
+  template:
+    metadata:
+      labels:
+        app: "karthikaks-3ad5"
+    spec:
+      containers:
+        - name: "karthikaks-3ad5"
+          image: "karthikexpacr.azurecr.io/karthikaks"
+          ports:
+          - containerPort: 80
